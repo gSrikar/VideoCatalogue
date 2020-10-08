@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VideoCatalogue</string>
+    <string name="label_main_fragment">Main Fragment</string>
+    <string name="content_description_play_button">Play</string>
+    <string name="content_description_pause_button">Pause</string>
+    <string name="menu_title_favourite">Favourite</string>
+    <string name="no_permission_text">Give the Storage permission from the settings</string>
+    <string name="empty_list">No videos found on the device</string>
+</resources>
