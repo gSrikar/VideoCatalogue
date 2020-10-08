@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.gsrikar.videocatalogue.ui.main.MainViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/videoRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="4"
+            tools:listitem="@layout/exo_video_list_item" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/empty_state_horizontal_margin"
+            android:layout_marginEnd="@dimen/empty_state_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:text="@{viewmodel.statusTextMutableLiveData}"
+            android:textSize="@dimen/empty_state_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Empty data" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
